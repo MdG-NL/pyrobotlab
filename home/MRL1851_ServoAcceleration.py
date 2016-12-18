@@ -3,7 +3,8 @@
 
 arduino = Runtime.createAndStart("arduino","Arduino")
 arduino.setBoardMega()
-arduino.connect("/dev/tty.usbmodem411")
+arduino.connect("/dev/tty.usbmodem411") # OSX USB connection
+# arduino.connect("COM4") # Windows USB connection
 
 servo = Runtime.createAndStart("servo","Servo")
 servo.attach(arduino,3)
